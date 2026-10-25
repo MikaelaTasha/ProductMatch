@@ -14,7 +14,8 @@ def main():
     print("  Sellers and prices may differ.")
     print("  Missing attributes alone do not mean different products.\n")
     print("Status: introduction only; no matching model or database yet.")
-    print("Next: Day 2 — load one prepared WDC benchmark variant.")
+    print("Day 2 data tool: python scripts/wdc_data.py --download")
+    print("Next: Day 3 — inspect 30 training pairs manually.")
 
 
 if __name__ == "__main__":

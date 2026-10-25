@@ -31,11 +31,12 @@ This is our intended task definition. We still need to inspect how the benchmark
 labels relate to it; we will document discrepancies rather than silently relabel
 the benchmark.
 
-## Current status: Day 1
+## Current status: Day 2
 
-The runnable starter prints the project purpose, planned decisions, and matching
-definition. **It does not predict matches yet.** No dataset, trained model,
-database, or graphical interface is included at this stage.
+The starter prints the project scope. A dataset tool now downloads and loads
+the prepared WDC small training split and prints labeled product pairs.
+**It does not predict matches yet.** There is no trained model, database, or
+graphical interface at this stage.
 
 ## Run locally
 
@@ -56,6 +57,16 @@ ProductMatch — Product Matching with Human Review
 Day 1: project setup is working.
 ```
 
+To download the Day 2 data and preview training pairs:
+
+```sh
+python scripts/wdc_data.py --download
+```
+
+To preview again offline, run `python scripts/wdc_data.py`.
+See the [dataset record](docs/dataset.md) for source, terms, file structure,
+checks, and an unresolved overlap found in the official test splits.
+
 No third-party packages are needed yet. Later sessions will record dependencies
 as they are introduced. To leave the environment, run `deactivate`. To run again
 in a new terminal, activate `.venv` and run `python main.py`.
@@ -75,10 +86,10 @@ in a new terminal, activate `.venv` and run `python main.py`.
 The initial scope is matching supplied pairs. Marketplace-wide candidate
 generation, scraping, embeddings, and production deployment are future work.
 
-We plan to use a prepared [WDC Products benchmark](https://webdatacommons.org/largescaleproductcorpus/wdc-products/).
-Day 2 will verify its source, terms, chosen variant, and file structure before
-loading data. Raw datasets, generated databases, models, credentials, and the
-local Python environment are excluded from Git.
+We use a prepared [WDC Products benchmark](https://webdatacommons.org/largescaleproductcorpus/wdc-products/)
+with small development sets and 50% corner cases. Raw datasets, generated
+databases, models, credentials, and the local Python environment are excluded
+from Git.
 
 ## Evaluation plan
 

@@ -1,0 +1,48 @@
+{
+  "source_url": "https://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/wdc-products/50pair.zip",
+  "retrieved_on": "2026-10-25",
+  "archive_sha256": "57fca0c66bd1d7a09298dfb5df4ed6428251487517e9cfbce209aad99388359d",
+  "archive_bytes": 22112083,
+  "splits": {
+    "train": {
+      "filename": "wdcproducts50cc50rnd000un_train_small.json.gz",
+      "sha256": "fd4afcc9c4fada82819e62f783d49e3661113408eae276e6587e309ae755afef",
+      "pairs": 2500,
+      "matches": 500,
+      "non_matches": 2000,
+      "unique_offers": 1000
+    },
+    "validation": {
+      "filename": "wdcproducts50cc50rnd000un_valid_small.json.gz",
+      "sha256": "64764bc43ff4686c9ff6683b141d8af1e01faa7a5a9d072378dbf3d84c64302c",
+      "pairs": 2500,
+      "matches": 500,
+      "non_matches": 2000,
+      "unique_offers": 1000
+    },
+    "test_seen": {
+      "filename": "wdcproducts50cc50rnd000un_gs.json.gz",
+      "sha256": "5cb5f43f325935a09900010ce988090e18cf7950b30ff7c85a308fa416350530",
+      "pairs": 4500,
+      "matches": 500,
+      "non_matches": 4000,
+      "unique_offers": 1000
+    },
+    "test_half_unseen": {
+      "filename": "wdcproducts50cc50rnd050un_gs.json.gz",
+      "sha256": "3b75ee9602884ccdd45f6c0b4b1977a25268ed78ced41c22814fb2ace69725d0",
+      "pairs": 4500,
+      "matches": 500,
+      "non_matches": 4000,
+      "unique_offers": 1000
+    },
+    "test_unseen": {
+      "filename": "wdcproducts50cc50rnd100un_gs.json.gz",
+      "sha256": "b928d8c5dfe87b6e5a3791387adfa4cb2553bfadaa27340a90521c923825413e",
+      "pairs": 4500,
+      "matches": 500,
+      "non_matches": 4000,
+      "unique_offers": 1000
+    }
+  }
+}
