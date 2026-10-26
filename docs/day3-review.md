@@ -1,4 +1,4 @@
-# Day 3: human review in progress
+# Day 3: human review completed
 
 Prepare the local worksheet from the project root:
 
@@ -21,6 +21,6 @@ overwrite existing review files so human notes are preserved.
 Generated files remain under the Git-ignored `data/` folder because they contain
 source listing text. The repository includes only the generator and instructions.
 
-Status: worksheet prepared; human judgments and the final findings summary are
-pending. Day 3 will be complete after all 30 pairs are reviewed and common
-failure cases and label-definition disagreements are summarized.
+Status: all 30 pairs reviewed with the user, completed 2026-10-26.
+See [findings](day3-findings.md). Original user responses and assistant feedback
+remain separate in the local worksheet; source labels were not changed.

@@ -31,12 +31,16 @@ This is our intended task definition. We still need to inspect how the benchmark
 labels relate to it; we will document discrepancies rather than silently relabel
 the benchmark.
 
-## Current status: Day 2
+## Current status: Day 3
 
 The starter prints the project scope. A dataset tool now downloads and loads
 the prepared WDC small training split and prints labeled product pairs.
 **It does not predict matches yet.** There is no trained model, database, or
 graphical interface at this stage.
+
+We have reviewed 30 training pairs and documented [matching evidence, difficult
+cases, and unresolved questions](docs/day3-findings.md). Next is SQLite storage
+and repeatable import (Day 4).
 
 ## Run locally
 

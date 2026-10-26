@@ -14,9 +14,9 @@
 - **Checked:** Downloaded successfully with the Python script into a fresh temporary folder; loaded 2,500 training pairs (500 matches, 2,000 non-matches), verified all five selected file hashes/counts, reran preparation from the cache, and passed seven synthetic-data tests. Audited offer-ID overlap without model evaluation.
 - **Uncertain:** Dataset redistribution license and alignment with our matching definition remain unresolved. Seen/half-unseen test files share some IDs with development splits; preserve files and investigate before evaluation. No model has been trained.
 
-## Day 3 — 2026-10-25 (in progress)
+## Day 3 — 2026-10-25 to 2026-10-26 (completed)
 
-- **Changed:** Prepared a reproducible local 30-pair worksheet with a separate benchmark answer key and blank human-review fields.
+- **Changed:** Prepared a reproducible local 30-pair worksheet, recorded all user judgments separately from assistant feedback, and summarized findings in `docs/day3-findings.md`.
 - **Why:** Inspect matching evidence before model development without presenting benchmark labels as our own judgments.
-- **Checked:** Selected 30 unique pairs from the pinned training file only; verified balanced sampling, deterministic selection, and preservation of existing worksheets on rerun.
-- **Uncertain:** Human review is pending, beginning with pairs 1–5. Findings and benchmark-label disagreements will be summarized after the review.
+- **Checked:** Selected 30 unique training pairs; verified balanced sampling, deterministic selection, overwrite protection, and 30 saved decisions. Recorded decisions agree with 27 benchmark labels, with three disagreements; this is not model accuracy.
+- **Uncertain:** Several benchmark matches remain ambiguous under our strict identity definition. Source labels are unchanged. Dataset redistribution terms and the Day 2 split-overlap issue remain unresolved.
