@@ -17,7 +17,8 @@ def main():
     print("Day 2 data tool: python scripts/wdc_data.py --download")
     print("Day 4 database tool: python -m scripts.import_data")
     print("Day 5 interface: python -m streamlit run app.py")
-    print("Next: Day 6 — normalize titles while preserving model codes and numbers.")
+    print("Day 6 preview: python -m scripts.preview_normalization")
+    print("Next: Day 7 — TF-IDF and cosine similarity.")
 
 
 if __name__ == "__main__":

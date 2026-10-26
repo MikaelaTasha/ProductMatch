@@ -41,3 +41,10 @@
 - **Why:** The other chat discussed broader technical coverage, but the original project roadmap had not incorporated it. Make gaps and future deliverables explicit.
 - **Checked:** Compared the planned data-engineering coverage with the implemented Days 1–5 and original 20-session plan.
 - **Uncertain:** Cloud provider, BI tool, deployment costs and data-upload rights remain to be resolved. Extended requirements are planned rather than demonstrated; Day 6 has not started.
+
+## Day 6 — 2026-10-26 (implementation complete; explanation exercise pending)
+
+- **Changed:** Added a versioned lowercase/whitespace title transformation and read-only training preview with separate original/normalized fields. The user first identified safe lowercase conversion and the need to preserve size differences.
+- **Why:** Introduce a repeatable data-cleansing step without erasing model codes, quantities or original evidence.
+- **Checked:** Inspected 1,000 training titles (999 changed); all pass idempotence checks. All 25 tests pass, including six new normalization checks and a synthetic database preservation/training-boundary check.
+- **Uncertain:** The user's final explanation is pending. Case-sensitive product distinctions, unit equivalence and broader multilingual normalization are not resolved. No prediction or matching-quality claim is made.

@@ -31,7 +31,7 @@ This is our intended task definition. We still need to inspect how the benchmark
 labels relate to it; we will document discrepancies rather than silently relabel
 the benchmark.
 
-## Current status: Day 5
+## Current status: Day 6
 
 The starter prints the project scope. A dataset tool now downloads and loads
 the prepared WDC small training split and prints labeled product pairs.
@@ -43,7 +43,9 @@ We have reviewed 30 training pairs and documented [matching evidence, difficult
 cases, and unresolved questions](docs/day3-findings.md). See the
 [database guide](docs/day4-database.md) for the schema and SQL examples.
 See the [interface guide](docs/day5-interface.md) for browsing instructions.
-Next is title normalization (Day 6).
+Conservative [title normalization](docs/day6-normalization.md) now lowercases
+letters and standardizes whitespace while retaining digits and punctuation.
+Original titles stay unchanged. Next is TF-IDF and cosine similarity (Day 7).
 
 ## Run locally
 
@@ -78,6 +80,8 @@ python -m scripts.import_data
 ```
 
 Rerunning the import does not duplicate listings or labeled pairs.
+To compare original and normalized training titles, run
+`python -m scripts.preview_normalization --examples 5`.
 See the [dataset record](docs/dataset.md) for source, terms, file structure,
 checks, and an unresolved overlap found in the official test splits.
 
