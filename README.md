@@ -31,18 +31,19 @@ This is our intended task definition. We still need to inspect how the benchmark
 labels relate to it; we will document discrepancies rather than silently relabel
 the benchmark.
 
-## Current status: Day 4
+## Current status: Day 5
 
 The starter prints the project scope. A dataset tool now downloads and loads
 the prepared WDC small training split and prints labeled product pairs.
 SQLite now stores listings and original labeled pairs with repeatable imports.
-**It does not predict matches yet.** There is no trained model or graphical
-interface at this stage.
+The Streamlit interface now lets you browse training pairs, search titles or
+pair IDs, and reveal the benchmark answer. **It does not predict matches yet.**
 
 We have reviewed 30 training pairs and documented [matching evidence, difficult
 cases, and unresolved questions](docs/day3-findings.md). See the
 [database guide](docs/day4-database.md) for the schema and SQL examples.
-Next is a pair-browsing interface (Day 5).
+See the [interface guide](docs/day5-interface.md) for browsing instructions.
+Next is title normalization (Day 6).
 
 ## Run locally
 
@@ -80,9 +81,17 @@ Rerunning the import does not duplicate listings or labeled pairs.
 See the [dataset record](docs/dataset.md) for source, terms, file structure,
 checks, and an unresolved overlap found in the official test splits.
 
-No third-party packages are needed yet. Later sessions will record dependencies
-as they are introduced. To leave the environment, run `deactivate`. To run again
-in a new terminal, activate `.venv` and run `python main.py`.
+To launch the graphical interface after importing the database:
+
+```sh
+python -m pip install -r requirements.txt
+python -m streamlit run app.py
+```
+
+Open http://127.0.0.1:8501. Stop the server with Control+C.
+The data scripts and text starter use only Python's standard library; the
+interface requires Streamlit. To leave the environment, run `deactivate`.
+In a new terminal, activate `.venv` before running these commands.
 
 ## Planned approach
 

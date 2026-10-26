@@ -13,10 +13,11 @@ def main():
     print("  Size, model, and pack quantity must agree when known.")
     print("  Sellers and prices may differ.")
     print("  Missing attributes alone do not mean different products.\n")
-    print("Status: data loading and SQLite storage ready; no matching model yet.")
+    print("Status: data loading, SQLite storage and pair explorer ready; no model yet.")
     print("Day 2 data tool: python scripts/wdc_data.py --download")
     print("Day 4 database tool: python -m scripts.import_data")
-    print("Next: Day 5 — browse product pairs in a minimal interface.")
+    print("Day 5 interface: python -m streamlit run app.py")
+    print("Next: Day 6 — normalize titles while preserving model codes and numbers.")
 
 
 if __name__ == "__main__":

@@ -27,3 +27,10 @@
 - **Why:** Store each listing once while preserving official pair labels and split memberships for later browsing and evaluation.
 - **Checked:** Imported 4,391 listings and 18,500 pairs across five splits; rerun inserted zero rows. Compared all stored pair fields with source data, checked SQLite integrity/foreign keys, executed all example queries and passed all 14 tests including conflict rollback.
 - **Uncertain:** Official split overlap and ambiguous product identity remain unresolved. No model, prediction store, human-review database or interface has been implemented yet.
+
+## Day 5 — 2026-10-26 (completed)
+
+- **Changed:** Added the Streamlit training-pair explorer, title/ID search, pair navigation, hidden benchmark answers, literal listing-text display, read-only queries, dependency pin and setup guide.
+- **Why:** Make original listing evidence easy to compare before building a matcher; keep test data outside the browsing workflow.
+- **Checked:** All 19 tests passed, including training-only queries, read-only access, answer reset, navigation, search and missing-database behavior. Started the local server and inspected the browser and search with real training data.
+- **Uncertain:** Cross-platform installation and full multilingual search are not verified. The interface does not predict or save human decisions. Dataset terms, identity ambiguities and the official split-overlap issue remain unresolved.
