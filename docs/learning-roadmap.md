@@ -10,7 +10,8 @@ Planned work is distinguished from verified implementation and independent study
 
 The original 20-session plan covered a local matching prototype. The extension
 below adds explicit data-engineering, cloud, lakehouse and BI deliverables.
-Days 1–5 remain completed; all later days are planned, not implemented.
+Days 1–5 are completed. Days 6–7 now have verified implementations; outstanding
+learning exercises are recorded in their notes. Days 8 onward remain planned.
 Days are work sessions, not consecutive calendar days. Budget roughly 45–90
 minutes per session, splitting complex tasks across extra sessions as needed.
 

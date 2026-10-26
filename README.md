@@ -31,13 +31,14 @@ This is our intended task definition. We still need to inspect how the benchmark
 labels relate to it; we will document discrepancies rather than silently relabel
 the benchmark.
 
-## Current status: Day 6
+## Current status: Day 7
 
 The starter prints the project scope. A dataset tool now downloads and loads
 the prepared WDC small training split and prints labeled product pairs.
 SQLite now stores listings and original labeled pairs with repeatable imports.
 The Streamlit interface now lets you browse training pairs, search titles or
-pair IDs, and reveal the benchmark answer. **It does not predict matches yet.**
+pair IDs, and reveal the benchmark answer. A separate command now runs a
+TF-IDF/cosine baseline; the interface does not display model predictions yet.
 
 We have reviewed 30 training pairs and documented [matching evidence, difficult
 cases, and unresolved questions](docs/day3-findings.md). See the
@@ -45,7 +46,10 @@ cases, and unresolved questions](docs/day3-findings.md). See the
 See the [interface guide](docs/day5-interface.md) for browsing instructions.
 Conservative [title normalization](docs/day6-normalization.md) now lowercases
 letters and standardizes whitespace while retaining digits and punctuation.
-Original titles stay unchanged. Next is TF-IDF and cosine similarity (Day 7).
+Original titles stay unchanged. The [Day 7 baseline](docs/day7-baseline.md)
+achieves 39.57% precision and 88.00% recall on the validation data used to choose
+its threshold; it is not ready for reliable automatic merging. No held-out test
+evaluation has been run. Next is attribute extraction (Day 8).
 
 ## Run locally
 
@@ -94,7 +98,15 @@ python -m streamlit run app.py
 
 Open http://127.0.0.1:8501. Stop the server with Control+C.
 The data scripts and text starter use only Python's standard library; the
-interface requires Streamlit. To leave the environment, run `deactivate`.
+interface requires Streamlit. The Day 7 baseline requires scikit-learn, also
+included in `requirements.txt`:
+
+```sh
+python -m scripts.run_baseline
+```
+
+This fits on training titles and chooses a threshold on validation pairs only.
+To leave the environment, run `deactivate`.
 In a new terminal, activate `.venv` before running these commands.
 
 ## Planned approach

@@ -48,3 +48,16 @@
 - **Why:** Introduce a repeatable data-cleansing step without erasing model codes, quantities or original evidence.
 - **Checked:** Inspected 1,000 training titles (999 changed); all pass idempotence checks. All 25 tests pass, including six new normalization checks and a synthetic database preservation/training-boundary check.
 - **Uncertain:** The user's final explanation is pending. Case-sensitive product distinctions, unit equivalence and broader multilingual normalization are not resolved. No prediction or matching-quality claim is made.
+
+## Day 6 learning follow-up — 2026-10-26
+
+The user explained that `2x8GB` may describe two modules, demonstrating why pack
+configuration matters. Independent string-operation/idempotence explanation is
+not yet verified.
+
+## Day 7 — 2026-10-26 (implementation complete; numerical exercises pending)
+
+- **Changed:** Added a training-fitted TF-IDF/cosine baseline, validation F1 threshold selection, aggregate report and scikit-learn dependency pin.
+- **Why:** Establish a measured comparison point before introducing attribute features. The user first explained that similar titles can differ in series or size.
+- **Checked:** All 33 tests passed; repeated run reproduced results and left the database unchanged. Fitted 1,000 unique training titles. Validation precision 39.57%, recall 88.00%, F1 54.59%; 672 false matches and 60 missed matches. No test sets read.
+- **Uncertain:** Results use the same validation set as threshold selection and are not held-out performance. False-match rate is unsuitable for automatic merging. Numerical learning exercises, attribute features, Review policy and test-split overlap resolution remain pending.
