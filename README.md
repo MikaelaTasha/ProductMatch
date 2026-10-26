@@ -128,12 +128,20 @@ after freezing the model and thresholds.
 
 ## Milestones
 
+The [data-engineering learning roadmap](docs/learning-roadmap.md) expands the
+original 20-session prototype plan to 36 sessions, adding Spark, a lakehouse
+table format, one cloud platform, a BI dashboard and operational practice.
+These extensions are planned, not implemented. From Day 6, sessions also include
+small independent Python/SQL tasks and mathematics/English explanations.
+
 - Day 1: repository, Python environment, runnable starter, and task definition.
 - Days 2–5: dataset inspection, SQLite import, and pair browsing interface.
 - Days 6–10: normalization, similarity baseline, attributes, and classifier.
 - Days 11–14: review thresholds, error analysis, and frozen evaluation.
 - Days 15–18: prediction history, human review, evidence, and automated checks.
 - Days 19–20: fresh-install verification, demo, limitations, and release.
+- Days 21–30: data contracts, Parquet, Spark, lakehouse storage, cloud and operations.
+- Days 31–36: SQL reporting, BI dashboard, reviewer feedback and English portfolio demo.
 
 Each session records changes, rationale, checks, and uncertainty in
 [the development log](docs/development-log.md).

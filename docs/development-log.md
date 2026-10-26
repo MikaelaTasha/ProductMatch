@@ -34,3 +34,10 @@
 - **Why:** Make original listing evidence easy to compare before building a matcher; keep test data outside the browsing workflow.
 - **Checked:** All 19 tests passed, including training-only queries, read-only access, answer reset, navigation, search and missing-database behavior. Started the local server and inspected the browser and search with real training data.
 - **Uncertain:** Cross-platform installation and full multilingual search are not verified. The interface does not predict or save human decisions. Dataset terms, identity ambiguities and the official split-overlap issue remain unresolved.
+
+## Roadmap alignment — 2026-10-26 (before Day 6)
+
+- **Changed:** Added `docs/learning-roadmap.md`, organizing data-engineering skills into 36 work sessions and independent learning exercises.
+- **Why:** The other chat discussed broader technical coverage, but the original project roadmap had not incorporated it. Make gaps and future deliverables explicit.
+- **Checked:** Compared the planned data-engineering coverage with the implemented Days 1–5 and original 20-session plan.
+- **Uncertain:** Cloud provider, BI tool, deployment costs and data-upload rights remain to be resolved. Extended requirements are planned rather than demonstrated; Day 6 has not started.
