@@ -20,3 +20,10 @@
 - **Why:** Inspect matching evidence before model development without presenting benchmark labels as our own judgments.
 - **Checked:** Selected 30 unique training pairs; verified balanced sampling, deterministic selection, overwrite protection, and 30 saved decisions. Recorded decisions agree with 27 benchmark labels, with three disagreements; this is not model accuracy.
 - **Uncertain:** Several benchmark matches remain ambiguous under our strict identity definition. Source labels are unchanged. Dataset redistribution terms and the Day 2 split-overlap issue remain unresolved.
+
+## Day 4 — 2026-10-26 (completed)
+
+- **Changed:** Added SQLite tables for listings, split provenance and labeled pairs, an atomic repeatable importer, example SQL queries and a database guide.
+- **Why:** Store each listing once while preserving official pair labels and split memberships for later browsing and evaluation.
+- **Checked:** Imported 4,391 listings and 18,500 pairs across five splits; rerun inserted zero rows. Compared all stored pair fields with source data, checked SQLite integrity/foreign keys, executed all example queries and passed all 14 tests including conflict rollback.
+- **Uncertain:** Official split overlap and ambiguous product identity remain unresolved. No model, prediction store, human-review database or interface has been implemented yet.
