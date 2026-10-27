@@ -101,3 +101,11 @@ not yet verified.
 - **Why:** Investigate observed failures and qualify future test claims before model/protocol freezing.
 - **Checked:** All 64 tests pass; aggregate audit repeats and database hash stays unchanged. Raw file hashes/counts verified. Half-unseen test repeats 20 training and 23 validation pairs; 1,664 pairs touch development offers. Seen test has 35 pairs touching development offers. Unseen has zero shared offers/clusters/pairs with development. Train/validation share all 500 clusters despite disjoint offers.
 - **Uncertain:** Publisher-side overlap cause unverified; error categories are hypotheses, not exhaustive ground truth. No test predictions/performance computed. Primary unseen evaluation and qualified secondary/filter options await Day 13 freeze. Independent cluster/generalization explanation pending.
+
+
+## Day 13 — 2026-10-27 (implementation/freeze complete; explanation pending)
+
+- **Changed:** Tested one auxiliary punctuation-insensitive model-code comparison, retaining original evidence/ambiguity. Predeclared strict validation-F1 improvement selects the 76-input candidate. Added a frozen evaluation protocol, exact source/runtime/data/model fingerprints and a verifier that refuses silent changes.
+- **Why:** Address observed code-format failures without broad normalization changes; fix evaluation rules before looking at test performance.
+- **Checked:** All 69 tests pass. Experiment reproduced and freeze creation/verification passed. Candidate validation F1 60.47% versus 60.25%, false matches 340 versus 342, missed matches 136 versus 137. Default policy reviews 908 cases (36.32%) with 79 false Different decisions and no automatic Matches. In-memory threshold tampering rejected.
+- **Uncertain:** Gain is small and validation-tuned, not statistically established. Automatic matching still fails the precision/support target. Frozen protocol qualifies overlap-contaminated secondary sets and specifies supplementary filtering. No test performance or browser integration yet; independent freeze explanation pending.

@@ -24,7 +24,8 @@ def main():
     print("Day 10 classifier: python -m scripts.train_classifier")
     print("Day 11 review policy: python -m scripts.evaluate_review")
     print("Day 12 audit: python -m scripts.audit_day12")
-    print("Next: Day 13 — test one improvement and freeze the evaluation protocol.")
+    print("Day 13 freeze check: python -m scripts.freeze_evaluation")
+    print("Next: Day 14 — run the frozen test evaluation.")
 
 
 if __name__ == "__main__":

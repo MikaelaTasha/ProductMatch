@@ -31,7 +31,7 @@ This is our intended task definition. We still need to inspect how the benchmark
 labels relate to it; we will document discrepancies rather than silently relabel
 the benchmark.
 
-## Current status: Day 12
+## Current status: Day 13
 
 The starter prints the project scope. A dataset tool now downloads and loads
 the prepared WDC small training split and prints labeled product pairs.
@@ -61,8 +61,10 @@ Automatic Match is disabled because the target is unattainable with sufficient
 support; automatic Different still misses 79 real matches. The
 [Day 12 audit](docs/day12-audit.md) documents validation error patterns and exact
 pair overlap in the half-unseen test set. The unseen test has no measured
-development overlap by offer or cluster ID. Next is one justified improvement
-and freezing the evaluation protocol (Day 13).
+development overlap by offer or cluster ID. [Day 13](docs/day13-freeze.md) retained
+a small code-alias improvement (validation F1 60.47%) and froze the model,
+thresholds and evaluation rules. Automatic Match remains disabled under the
+95% review policy. Next is frozen test evaluation (Day 14).
 
 ## Run locally
 
@@ -147,6 +149,12 @@ To audit validation errors and split metadata without test predictions:
 
 ```sh
 python -m scripts.audit_day12
+```
+
+To verify the frozen pipeline before test evaluation:
+
+```sh
+python -m scripts.freeze_evaluation
 ```
 To leave the environment, run `deactivate`.
 In a new terminal, activate `.venv` before running these commands.
