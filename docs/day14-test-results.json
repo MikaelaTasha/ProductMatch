@@ -1,0 +1,271 @@
+{
+  "evaluation_version": "frozen-test-evaluation-v1",
+  "freeze_sha256": "0855896be6d09964f31c53aeefbf8ca53f0e35e61d30394c2966146d7a81690c",
+  "runner_sha256": "e52578a00d71aee11575b2aa6549f12f71f9b37fe2d68d73e147842a2ab79663",
+  "selected_version": "logistic-title-attributes-code-alias-v1",
+  "runtime": {
+    "python": "3.10.1",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit_learn": "1.7.2"
+  },
+  "binary_threshold": 0.28771288202681267,
+  "review_thresholds": {
+    "lower_threshold": 0.1939710586412505,
+    "upper_threshold": 1.0000000000000002
+  },
+  "model_fingerprint_sha256": "c6463e6b81a43479edfb97d18cb97e56860a1da2cdc924f44e23de3484c7fbe5",
+  "results": {
+    "test_unseen": {
+      "role": "primary",
+      "official": {
+        "pairs": 4500,
+        "actual_matches": 500,
+        "actual_nonmatches": 4000,
+        "review_policy": {
+          "pairs": 4500,
+          "automatic_matches": 0,
+          "automatic_different": 2693,
+          "correct_matches": 0,
+          "false_matches": 0,
+          "correct_different": 2584,
+          "false_different": 109,
+          "review_matches": 391,
+          "review_nonmatches": 1416,
+          "match_precision": null,
+          "different_precision": 0.9595246936502042,
+          "automatic_match_recall": 0.0,
+          "review_rate": 0.40155555555555555,
+          "automatic_decision_coverage": 0.5984444444444444
+        },
+        "binary_diagnostic": {
+          "pairs": 4500,
+          "true_matches": 500,
+          "predicted_matches": 1423,
+          "true_positives": 336,
+          "false_positives": 1087,
+          "false_negatives": 164,
+          "true_negatives": 2913,
+          "precision": 0.23612087139845397,
+          "recall": 0.672,
+          "f1": 0.3494539781591264,
+          "accuracy": 0.722,
+          "review_rate": 0.0,
+          "automatic_decision_coverage": 1.0
+        }
+      },
+      "source": {
+        "split_name": "test_unseen",
+        "source_filename": "wdcproducts50cc50rnd100un_gs.json.gz",
+        "source_sha256": "b928d8c5dfe87b6e5a3791387adfa4cb2553bfadaa27340a90521c923825413e",
+        "archive_sha256": "57fca0c66bd1d7a09298dfb5df4ed6428251487517e9cfbce209aad99388359d",
+        "source_url": "https://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/wdc-products/50pair.zip"
+      },
+      "diagnostics": {
+        "unique_listings": 1000,
+        "zero_vector_listings": 31,
+        "pairs_with_zero_vector": 275
+      },
+      "shared_development_offers": 0,
+      "shared_development_clusters": 0,
+      "pairs_touching_development_offers": 0
+    },
+    "test_seen": {
+      "role": "secondary_overlap_affected",
+      "official": {
+        "pairs": 4500,
+        "actual_matches": 500,
+        "actual_nonmatches": 4000,
+        "review_policy": {
+          "pairs": 4500,
+          "automatic_matches": 0,
+          "automatic_different": 2941,
+          "correct_matches": 0,
+          "false_matches": 0,
+          "correct_different": 2861,
+          "false_different": 80,
+          "review_matches": 420,
+          "review_nonmatches": 1139,
+          "match_precision": null,
+          "different_precision": 0.9727983679020741,
+          "automatic_match_recall": 0.0,
+          "review_rate": 0.34644444444444444,
+          "automatic_decision_coverage": 0.6535555555555556
+        },
+        "binary_diagnostic": {
+          "pairs": 4500,
+          "true_matches": 500,
+          "predicted_matches": 1105,
+          "true_positives": 350,
+          "false_positives": 755,
+          "false_negatives": 150,
+          "true_negatives": 3245,
+          "precision": 0.3167420814479638,
+          "recall": 0.7,
+          "f1": 0.43613707165109034,
+          "accuracy": 0.7988888888888889,
+          "review_rate": 0.0,
+          "automatic_decision_coverage": 1.0
+        }
+      },
+      "source": {
+        "split_name": "test_seen",
+        "source_filename": "wdcproducts50cc50rnd000un_gs.json.gz",
+        "source_sha256": "5cb5f43f325935a09900010ce988090e18cf7950b30ff7c85a308fa416350530",
+        "archive_sha256": "57fca0c66bd1d7a09298dfb5df4ed6428251487517e9cfbce209aad99388359d",
+        "source_url": "https://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/wdc-products/50pair.zip"
+      },
+      "diagnostics": {
+        "unique_listings": 1000,
+        "zero_vector_listings": 1,
+        "pairs_with_zero_vector": 8
+      },
+      "shared_development_offers": 4,
+      "shared_development_clusters": 500,
+      "pairs_touching_development_offers": 35,
+      "supplementary_no_development_offers": {
+        "filter": "Exclude either endpoint in train/validation offer IDs; not an official benchmark.",
+        "retained": 4465,
+        "excluded": 35,
+        "excluded_matches": 4,
+        "excluded_nonmatches": 31,
+        "metrics": {
+          "pairs": 4465,
+          "actual_matches": 496,
+          "actual_nonmatches": 3969,
+          "review_policy": {
+            "pairs": 4465,
+            "automatic_matches": 0,
+            "automatic_different": 2924,
+            "correct_matches": 0,
+            "false_matches": 0,
+            "correct_different": 2845,
+            "false_different": 79,
+            "review_matches": 417,
+            "review_nonmatches": 1124,
+            "match_precision": null,
+            "different_precision": 0.9729822161422709,
+            "automatic_match_recall": 0.0,
+            "review_rate": 0.34512877939529674,
+            "automatic_decision_coverage": 0.6548712206047033
+          },
+          "binary_diagnostic": {
+            "pairs": 4465,
+            "true_matches": 496,
+            "predicted_matches": 1090,
+            "true_positives": 347,
+            "false_positives": 743,
+            "false_negatives": 149,
+            "true_negatives": 3226,
+            "precision": 0.318348623853211,
+            "recall": 0.6995967741935484,
+            "f1": 0.43757881462799497,
+            "accuracy": 0.8002239641657335,
+            "review_rate": 0.0,
+            "automatic_decision_coverage": 1.0
+          }
+        }
+      }
+    },
+    "test_half_unseen": {
+      "role": "secondary_overlap_affected",
+      "official": {
+        "pairs": 4500,
+        "actual_matches": 500,
+        "actual_nonmatches": 4000,
+        "review_policy": {
+          "pairs": 4500,
+          "automatic_matches": 0,
+          "automatic_different": 2797,
+          "correct_matches": 0,
+          "false_matches": 0,
+          "correct_different": 2728,
+          "false_different": 69,
+          "review_matches": 431,
+          "review_nonmatches": 1272,
+          "match_precision": null,
+          "different_precision": 0.975330711476582,
+          "automatic_match_recall": 0.0,
+          "review_rate": 0.37844444444444447,
+          "automatic_decision_coverage": 0.6215555555555555
+        },
+        "binary_diagnostic": {
+          "pairs": 4500,
+          "true_matches": 500,
+          "predicted_matches": 1261,
+          "true_positives": 371,
+          "false_positives": 890,
+          "false_negatives": 129,
+          "true_negatives": 3110,
+          "precision": 0.2942109436954798,
+          "recall": 0.742,
+          "f1": 0.42135150482680295,
+          "accuracy": 0.7735555555555556,
+          "review_rate": 0.0,
+          "automatic_decision_coverage": 1.0
+        }
+      },
+      "source": {
+        "split_name": "test_half_unseen",
+        "source_filename": "wdcproducts50cc50rnd050un_gs.json.gz",
+        "source_sha256": "3b75ee9602884ccdd45f6c0b4b1977a25268ed78ced41c22814fb2ace69725d0",
+        "archive_sha256": "57fca0c66bd1d7a09298dfb5df4ed6428251487517e9cfbce209aad99388359d",
+        "source_url": "https://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/wdc-products/50pair.zip"
+      },
+      "diagnostics": {
+        "unique_listings": 1000,
+        "zero_vector_listings": 15,
+        "pairs_with_zero_vector": 116
+      },
+      "shared_development_offers": 216,
+      "shared_development_clusters": 250,
+      "pairs_touching_development_offers": 1664,
+      "supplementary_no_development_offers": {
+        "filter": "Exclude either endpoint in train/validation offer IDs; not an official benchmark.",
+        "retained": 2836,
+        "excluded": 1664,
+        "excluded_matches": 175,
+        "excluded_nonmatches": 1489,
+        "metrics": {
+          "pairs": 2836,
+          "actual_matches": 325,
+          "actual_nonmatches": 2511,
+          "review_policy": {
+            "pairs": 2836,
+            "automatic_matches": 0,
+            "automatic_different": 1711,
+            "correct_matches": 0,
+            "false_matches": 0,
+            "correct_different": 1659,
+            "false_different": 52,
+            "review_matches": 273,
+            "review_nonmatches": 852,
+            "match_precision": null,
+            "different_precision": 0.9696084161309176,
+            "automatic_match_recall": 0.0,
+            "review_rate": 0.3966854724964739,
+            "automatic_decision_coverage": 0.6033145275035261
+          },
+          "binary_diagnostic": {
+            "pairs": 2836,
+            "true_matches": 325,
+            "predicted_matches": 852,
+            "true_positives": 231,
+            "false_positives": 621,
+            "false_negatives": 94,
+            "true_negatives": 1890,
+            "precision": 0.2711267605633803,
+            "recall": 0.7107692307692308,
+            "f1": 0.3925233644859813,
+            "accuracy": 0.7478843441466855,
+            "review_rate": 0.0,
+            "automatic_decision_coverage": 1.0
+          }
+        }
+      }
+    }
+  },
+  "test_performance_seen": true,
+  "thresholds_retuned": false,
+  "limitations": "Test sets are now exposed. No pooled estimate, independent-pair confidence interval, or completed human-review outcomes. Validation precision targets are not guarantees."
+}

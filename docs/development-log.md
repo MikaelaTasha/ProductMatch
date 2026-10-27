@@ -109,3 +109,11 @@ not yet verified.
 - **Why:** Address observed code-format failures without broad normalization changes; fix evaluation rules before looking at test performance.
 - **Checked:** All 69 tests pass. Experiment reproduced and freeze creation/verification passed. Candidate validation F1 60.47% versus 60.25%, false matches 340 versus 342, missed matches 136 versus 137. Default policy reviews 908 cases (36.32%) with 79 false Different decisions and no automatic Matches. In-memory threshold tampering rejected.
 - **Uncertain:** Gain is small and validation-tuned, not statistically established. Automatic matching still fails the precision/support target. Frozen protocol qualifies overlap-contaminated secondary sets and specifies supplementary filtering. No test performance or browser integration yet; independent freeze explanation pending.
+
+
+## Day 14 — 2026-10-27 (frozen evaluation complete; explanation pending)
+
+- **Changed:** Added a guarded test runner and published separate official/supplementary aggregate results. Frozen inputs, model and thresholds are unchanged; test sets are now exposed.
+- **Why:** Measure generalization under the predeclared protocol instead of treating validation performance as final evidence.
+- **Checked:** All 74 tests passed before the real run. Freeze verified; one scoring pass per official split. All report counts reconcile, subset sizes match the protocol, and database/model/runner/freeze hashes agree. Primary unseen binary precision 23.61%, recall 67.20%, F1 34.95%. Review policy routes 1,807/4,500 pairs (40.16%), marks 2,693 Different with 109 errors, and has no automatic Matches.
+- **Uncertain:** Generalization is weak; Different precision 95.95% is descriptive, not a guarantee. Secondary sets retain documented overlap and supplementary filters alter their populations. No independent-pair significance, production, reviewer-outcome or cost claim. Further tuning must disclose test exposure and use fresh evaluation data for fresh claims.
