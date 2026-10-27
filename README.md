@@ -31,7 +31,7 @@ This is our intended task definition. We still need to inspect how the benchmark
 labels relate to it; we will document discrepancies rather than silently relabel
 the benchmark.
 
-## Current status: Day 10
+## Current status: Day 11
 
 The starter prints the project scope. A dataset tool now downloads and loads
 the prepared WDC small training split and prints labeled product pairs.
@@ -55,7 +55,11 @@ not change predictions yet. [Day 9 pair features](docs/day9-features.md) now
 compare these details, keeping missing and ambiguous evidence separate.
 The [Day 10 classifier](docs/day10-classifier.md) reaches 51.49% precision and
 72.60% recall at its validation-selected threshold: fewer false matches, but
-more missed matches. Next is a Review policy (Day 11).
+more missed matches. The [Day 11 Review policy](docs/day11-review.md) routes
+36.68% of validation pairs to review at its provisional 95% precision target.
+Automatic Match is disabled because the target is unattainable with sufficient
+support; automatic Different still misses 79 real matches. Next is error and
+split analysis (Day 12).
 
 ## Run locally
 
@@ -128,6 +132,12 @@ To train and compare the classifier on training/validation data:
 
 ```sh
 python -m scripts.train_classifier
+```
+
+To evaluate Match/Different/Review thresholds:
+
+```sh
+python -m scripts.evaluate_review
 ```
 To leave the environment, run `deactivate`.
 In a new terminal, activate `.venv` before running these commands.

@@ -85,3 +85,11 @@ not yet verified.
 - **Why:** Measure whether a supervised combination gives a more useful comparison point before introducing human review. No ablation claim is made.
 - **Checked:** All 55 tests pass. Real-data report reproduced exactly, database hash unchanged, saved Day 7 baseline metrics reproduced. Validation precision 51.49%, recall 72.60%, F1 60.25%; 342 false matches and 137 missed matches, versus 672 and 60 for the baseline. No test sets read.
 - **Uncertain:** Validation is reused for development and threshold selection. Scores are uncalibrated; false matches remain common. No Review policy, hard identity constraints or saved inference model. Probability/class-imbalance explanation exercises and split audit remain pending.
+
+
+## Day 11 — 2026-10-27 (implementation complete; explanation pending)
+
+- **Changed:** Added two-threshold Match/Different/Review policy, validation coverage maximization under provisional 95% per-class precision and 20-case support constraints, plus fixed 90%/99% scenarios and explicit undefined metrics.
+- **Why:** Make review workload and both automatic error types visible without pretending every pair can be reliably decided.
+- **Checked:** All 61 tests pass, including exhaustive-reference threshold search. Repeated real report is identical, database hash unchanged, Day 10 binary metrics reproduced. Default: 917 Review cases (36.68%), 1,583 automatic Different decisions including 79 actual matches, and zero automatic Matches.
+- **Uncertain:** Automatic Match cannot meet the targets with adequate support; its precision is undefined and recall zero. No underlying model improvement, completed human reviews or held-out evaluation claimed. Browser integration, split/error audit and independent explanation remain pending.

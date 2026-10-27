@@ -1,0 +1,158 @@
+{
+  "classifier_version": "logistic-title-attributes-v1",
+  "feature_version": "attribute-comparisons-v1",
+  "parameters": {
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 1000,
+    "tol": 0.0001,
+    "class_weight": null,
+    "random_state": 0
+  },
+  "evaluation_scope": "validation-selected policies, not held-out performance",
+  "selection_rule": "maximize automatic coverage subject to precision/support for each enabled class; ties: fewer errors, more correct Matches, higher upper then lower lower threshold",
+  "decision_rule": "score < lower: Different; score >= upper: Match; otherwise Review",
+  "default_policy": {
+    "policy_version": "two-threshold-review-v1",
+    "target_precision": 0.95,
+    "min_support_per_automatic_class": 20,
+    "lower_threshold": 0.19254092640589743,
+    "upper_threshold": 1.0000000000000002,
+    "validation_metrics": {
+      "pairs": 2500,
+      "automatic_matches": 0,
+      "automatic_different": 1583,
+      "correct_matches": 0,
+      "false_matches": 0,
+      "correct_different": 1504,
+      "false_different": 79,
+      "review_matches": 421,
+      "review_nonmatches": 496,
+      "match_precision": null,
+      "different_precision": 0.9500947567909034,
+      "automatic_match_recall": 0.0,
+      "review_rate": 0.3668,
+      "automatic_decision_coverage": 0.6332
+    },
+    "match_enabled": false,
+    "different_enabled": true
+  },
+  "sensitivity_policies": [
+    {
+      "policy_version": "two-threshold-review-v1",
+      "target_precision": 0.9,
+      "min_support_per_automatic_class": 20,
+      "lower_threshold": 0.3807773539748294,
+      "upper_threshold": 1.0000000000000002,
+      "validation_metrics": {
+        "pairs": 2500,
+        "automatic_matches": 0,
+        "automatic_different": 1953,
+        "correct_matches": 0,
+        "false_matches": 0,
+        "correct_different": 1758,
+        "false_different": 195,
+        "review_matches": 305,
+        "review_nonmatches": 242,
+        "match_precision": null,
+        "different_precision": 0.9001536098310292,
+        "automatic_match_recall": 0.0,
+        "review_rate": 0.2188,
+        "automatic_decision_coverage": 0.7812
+      },
+      "match_enabled": false,
+      "different_enabled": true
+    },
+    {
+      "policy_version": "two-threshold-review-v1",
+      "target_precision": 0.95,
+      "min_support_per_automatic_class": 20,
+      "lower_threshold": 0.19254092640589743,
+      "upper_threshold": 1.0000000000000002,
+      "validation_metrics": {
+        "pairs": 2500,
+        "automatic_matches": 0,
+        "automatic_different": 1583,
+        "correct_matches": 0,
+        "false_matches": 0,
+        "correct_different": 1504,
+        "false_different": 79,
+        "review_matches": 421,
+        "review_nonmatches": 496,
+        "match_precision": null,
+        "different_precision": 0.9500947567909034,
+        "automatic_match_recall": 0.0,
+        "review_rate": 0.3668,
+        "automatic_decision_coverage": 0.6332
+      },
+      "match_enabled": false,
+      "different_enabled": true
+    },
+    {
+      "policy_version": "two-threshold-review-v1",
+      "target_precision": 0.99,
+      "min_support_per_automatic_class": 20,
+      "lower_threshold": 0.04822325284376818,
+      "upper_threshold": 1.0000000000000002,
+      "validation_metrics": {
+        "pairs": 2500,
+        "automatic_matches": 0,
+        "automatic_different": 642,
+        "correct_matches": 0,
+        "false_matches": 0,
+        "correct_different": 636,
+        "false_different": 6,
+        "review_matches": 494,
+        "review_nonmatches": 1364,
+        "match_precision": null,
+        "different_precision": 0.9906542056074766,
+        "automatic_match_recall": 0.0,
+        "review_rate": 0.7432,
+        "automatic_decision_coverage": 0.2568
+      },
+      "match_enabled": false,
+      "different_enabled": true
+    }
+  ],
+  "binary_reference": {
+    "threshold": 0.2889457402616079,
+    "validation_metrics": {
+      "pairs": 2500,
+      "true_matches": 500,
+      "predicted_matches": 705,
+      "true_positives": 363,
+      "false_positives": 342,
+      "false_negatives": 137,
+      "true_negatives": 1658,
+      "precision": 0.5148936170212766,
+      "recall": 0.726,
+      "f1": 0.6024896265560166,
+      "accuracy": 0.8084,
+      "review_rate": 0.0,
+      "automatic_decision_coverage": 1.0
+    }
+  },
+  "validation_diagnostics": {
+    "unique_listings": 1000,
+    "zero_vector_listings": 0,
+    "pairs_with_zero_vector": 0
+  },
+  "sources": {
+    "train": {
+      "split_name": "train",
+      "source_filename": "wdcproducts50cc50rnd000un_train_small.json.gz",
+      "source_sha256": "fd4afcc9c4fada82819e62f783d49e3661113408eae276e6587e309ae755afef",
+      "archive_sha256": "57fca0c66bd1d7a09298dfb5df4ed6428251487517e9cfbce209aad99388359d",
+      "source_url": "https://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/wdc-products/50pair.zip"
+    },
+    "validation": {
+      "split_name": "validation",
+      "source_filename": "wdcproducts50cc50rnd000un_valid_small.json.gz",
+      "source_sha256": "64764bc43ff4686c9ff6683b141d8af1e01faa7a5a9d072378dbf3d84c64302c",
+      "archive_sha256": "57fca0c66bd1d7a09298dfb5df4ed6428251487517e9cfbce209aad99388359d",
+      "source_url": "https://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/wdc-products/50pair.zip"
+    }
+  },
+  "test_sets_read": false,
+  "limitations": "95% is a provisional learning target, not a guarantee or calibrated confidence. No human outcomes assumed; no model saved or UI integration."
+}
