@@ -31,7 +31,7 @@ This is our intended task definition. We still need to inspect how the benchmark
 labels relate to it; we will document discrepancies rather than silently relabel
 the benchmark.
 
-## Current status: Day 7
+## Current status: Day 8
 
 The starter prints the project scope. A dataset tool now downloads and loads
 the prepared WDC small training split and prints labeled product pairs.
@@ -49,7 +49,9 @@ letters and standardizes whitespace while retaining digits and punctuation.
 Original titles stay unchanged. The [Day 7 baseline](docs/day7-baseline.md)
 achieves 39.57% precision and 88.00% recall on the validation data used to choose
 its threshold; it is not ready for reliable automatic merging. No held-out test
-evaluation has been run. Next is attribute extraction (Day 8).
+evaluation has been run. [Day 8 extraction](docs/day8-attributes.md) now records
+possible model codes, capacities, frequencies and explicit pack counts. It does
+not change predictions yet. Next is comparing attributes between pairs (Day 9).
 
 ## Run locally
 
@@ -106,6 +108,11 @@ python -m scripts.run_baseline
 ```
 
 This fits on training titles and chooses a threshold on validation pairs only.
+To inspect extracted details from training titles, run:
+
+```sh
+python -m scripts.preview_attributes --examples 5
+```
 To leave the environment, run `deactivate`.
 In a new terminal, activate `.venv` before running these commands.
 

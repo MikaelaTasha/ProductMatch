@@ -61,3 +61,11 @@ not yet verified.
 - **Why:** Establish a measured comparison point before introducing attribute features. The user first explained that similar titles can differ in series or size.
 - **Checked:** All 33 tests passed; repeated run reproduced results and left the database unchanged. Fitted 1,000 unique training titles. Validation precision 39.57%, recall 88.00%, F1 54.59%; 672 false matches and 60 missed matches. No test sets read.
 - **Uncertain:** Results use the same validation set as threshold selection and are not held-out performance. False-match rate is unsuitable for automatic merging. Numerical learning exercises, attribute features, Review policy and test-split overlap resolution remain pending.
+
+
+## Day 8 — 2026-10-27 (implementation complete; learning follow-up pending)
+
+- **Changed:** Added versioned title evidence extraction, lowercase model candidates with original spelling, unit conversion, explicit pack arithmetic, missing flags and a training-only preview with aggregate coverage.
+- **Why:** Distinguish capacity, frequency and pack configuration before creating pair-comparison features. Keep uncertain model tokens as candidates.
+- **Checked:** All 42 tests passed, including nine extractor tests. Inspected five training pack examples. Previewed 1,000 unique training listings: model candidates in 762, storage in 173, volume in 21, frequency in 43, explicit counts/packs in 26. Database SHA-256 unchanged; no test-set evaluation.
+- **Uncertain:** Coverage is not accuracy. Compatibility references, unsupported formats and ambiguous quantities require further handling. Matching predictions remain unchanged. The user identified model/count/per-module capacity; total-capacity versus frequency was clarified, with independent follow-up pending.

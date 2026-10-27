@@ -1,0 +1,14 @@
+{
+  "extraction_version": "title-attributes-v1",
+  "scope": "unique training titles only",
+  "listings": 1000,
+  "missing_counts": {
+    "title": 0,
+    "model_candidate": 238,
+    "storage": 827,
+    "volume": 979,
+    "frequency": 957,
+    "explicit_pack": 974
+  },
+  "note": "Coverage of heuristic evidence, not extraction accuracy or matching performance."
+}
