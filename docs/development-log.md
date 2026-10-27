@@ -69,3 +69,11 @@ not yet verified.
 - **Why:** Distinguish capacity, frequency and pack configuration before creating pair-comparison features. Keep uncertain model tokens as candidates.
 - **Checked:** All 42 tests passed, including nine extractor tests. Inspected five training pack examples. Previewed 1,000 unique training listings: model candidates in 762, storage in 173, volume in 21, frequency in 43, explicit counts/packs in 26. Database SHA-256 unchanged; no test-set evaluation.
 - **Uncertain:** Coverage is not accuracy. Compatibility references, unsupported formats and ambiguous quantities require further handling. Matching predictions remain unchanged. The user identified model/count/per-module capacity; total-capacity versus frequency was clarified, with independent follow-up pending.
+
+
+## Day 9 — 2026-10-27 (implementation complete; independent exercises pending)
+
+- **Changed:** Added 14 attribute comparisons, each encoded as five evidence states (70 numeric features), a training-only aggregate preview, SQL join/quality summary and feature dictionary. Equal totals retain differences in pack counts and per-item capacity.
+- **Why:** Supply label-free evidence to the planned classifier without treating missing information or multiple candidates as a verified conflict.
+- **Checked:** All 49 tests pass. Two real-data reports agree and preserve the database hash. SQL audited 2,500 training pairs: no broken references/missing titles, 2,123 pairs with at least one missing brand. No validation/test evaluation or prediction changes.
+- **Uncertain:** Extraction errors carry through; some comparison fields have no training variation. No matching improvement measured. User correctly calculated 8GB total; independent pack explanation and Python/SQL practice remain pending.

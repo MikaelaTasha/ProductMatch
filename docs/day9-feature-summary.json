@@ -1,0 +1,114 @@
+{
+  "feature_version": "attribute-comparisons-v1",
+  "extraction_version": "title-attributes-v1",
+  "scope": "training pairs only",
+  "numeric_feature_count": 70,
+  "sql_quality": {
+    "pairs": 2500,
+    "labeled_matches": 500,
+    "broken_references": 0,
+    "pairs_with_missing_title": 0,
+    "pairs_with_missing_brand": 2123
+  },
+  "comparison_counts": {
+    "model_candidate": {
+      "missing_both": 266,
+      "missing_one": 675,
+      "ambiguous": 895,
+      "agrees": 134,
+      "differs": 530
+    },
+    "storage_mention": {
+      "missing_both": 1881,
+      "missing_one": 385,
+      "ambiguous": 4,
+      "agrees": 114,
+      "differs": 116
+    },
+    "storage_per_item": {
+      "missing_both": 2418,
+      "missing_one": 71,
+      "ambiguous": 0,
+      "agrees": 6,
+      "differs": 5
+    },
+    "storage_total": {
+      "missing_both": 2418,
+      "missing_one": 71,
+      "ambiguous": 0,
+      "agrees": 6,
+      "differs": 5
+    },
+    "storage_count": {
+      "missing_both": 2418,
+      "missing_one": 71,
+      "ambiguous": 0,
+      "agrees": 8,
+      "differs": 3
+    },
+    "volume_mention": {
+      "missing_both": 2414,
+      "missing_one": 73,
+      "ambiguous": 0,
+      "agrees": 8,
+      "differs": 5
+    },
+    "volume_per_item": {
+      "missing_both": 2500,
+      "missing_one": 0,
+      "ambiguous": 0,
+      "agrees": 0,
+      "differs": 0
+    },
+    "volume_total": {
+      "missing_both": 2500,
+      "missing_one": 0,
+      "ambiguous": 0,
+      "agrees": 0,
+      "differs": 0
+    },
+    "volume_count": {
+      "missing_both": 2500,
+      "missing_one": 0,
+      "ambiguous": 0,
+      "agrees": 0,
+      "differs": 0
+    },
+    "frequency": {
+      "missing_both": 2316,
+      "missing_one": 143,
+      "ambiguous": 0,
+      "agrees": 23,
+      "differs": 18
+    },
+    "pack_count": {
+      "missing_both": 2478,
+      "missing_one": 17,
+      "ambiguous": 0,
+      "agrees": 5,
+      "differs": 0
+    },
+    "sheet_count": {
+      "missing_both": 2475,
+      "missing_one": 23,
+      "ambiguous": 0,
+      "agrees": 1,
+      "differs": 1
+    },
+    "piece_count": {
+      "missing_both": 2500,
+      "missing_one": 0,
+      "ambiguous": 0,
+      "agrees": 0,
+      "differs": 0
+    },
+    "module_count": {
+      "missing_both": 2500,
+      "missing_one": 0,
+      "ambiguous": 0,
+      "agrees": 0,
+      "differs": 0
+    }
+  },
+  "note": "Heuristic evidence states, not verified conflicts or predictions."
+}

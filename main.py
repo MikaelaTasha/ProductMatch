@@ -20,7 +20,8 @@ def main():
     print("Day 6 preview: python -m scripts.preview_normalization")
     print("Day 7 baseline: python -m scripts.run_baseline")
     print("Day 8 attributes: python -m scripts.preview_attributes")
-    print("Next: Day 9 — compare attributes between product pairs.")
+    print("Day 9 features: python -m scripts.preview_features")
+    print("Next: Day 10 — train a classifier with similarity and attribute features.")
 
 
 if __name__ == "__main__":
