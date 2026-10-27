@@ -108,3 +108,13 @@ created new splits. Investigate the discrepancy before Days 13–14 and before
 claiming leakage-free seen/half-unseen evaluation. Training and validation have
 no shared IDs in this snapshot, so Day 3 training-pair inspection can proceed.
 Product-level and pair-level leakage have not been fully audited.
+
+
+## Day 12 follow-up — 2026-10-27
+
+The [expanded audit](day12-audit.md) confirms shared product clusters across
+train/validation and exact repeated pairs in half-unseen test (20 with training,
+23 with validation). The unseen test shares no measured offer, cluster or pair
+IDs with development data. Evaluation options are documented; the source of
+the official overlaps is still unverified. All pinned raw-file hashes/counts
+were rechecked. No test predictions or test performance were computed.

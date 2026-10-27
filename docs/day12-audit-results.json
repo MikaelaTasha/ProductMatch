@@ -1,0 +1,622 @@
+{
+  "split_audit": {
+    "scope": "IDs, cluster IDs and provenance only; no test titles, labels or scores",
+    "splits": {
+      "test_half_unseen": {
+        "pairs": 4500,
+        "unique_offers": 1000,
+        "unique_clusters": 500,
+        "unordered_pairs": 4500,
+        "pairs_touching_development_offers": 1664
+      },
+      "test_seen": {
+        "pairs": 4500,
+        "unique_offers": 1000,
+        "unique_clusters": 500,
+        "unordered_pairs": 4500,
+        "pairs_touching_development_offers": 35
+      },
+      "test_unseen": {
+        "pairs": 4500,
+        "unique_offers": 1000,
+        "unique_clusters": 500,
+        "unordered_pairs": 4500,
+        "pairs_touching_development_offers": 0
+      },
+      "train": {
+        "pairs": 2500,
+        "unique_offers": 1000,
+        "unique_clusters": 500,
+        "unordered_pairs": 2500,
+        "pairs_touching_development_offers": 2500
+      },
+      "validation": {
+        "pairs": 2500,
+        "unique_offers": 1000,
+        "unique_clusters": 500,
+        "unordered_pairs": 2500,
+        "pairs_touching_development_offers": 2500
+      }
+    },
+    "overlaps": [
+      {
+        "left": "test_half_unseen",
+        "right": "test_seen",
+        "shared_offers": 115,
+        "shared_clusters": 250,
+        "shared_pairs": 35,
+        "shared_cluster_pairs": 588
+      },
+      {
+        "left": "test_half_unseen",
+        "right": "test_unseen",
+        "shared_offers": 276,
+        "shared_clusters": 250,
+        "shared_pairs": 288,
+        "shared_cluster_pairs": 619
+      },
+      {
+        "left": "test_half_unseen",
+        "right": "train",
+        "shared_offers": 110,
+        "shared_clusters": 250,
+        "shared_pairs": 20,
+        "shared_cluster_pairs": 430
+      },
+      {
+        "left": "test_half_unseen",
+        "right": "validation",
+        "shared_offers": 106,
+        "shared_clusters": 250,
+        "shared_pairs": 23,
+        "shared_cluster_pairs": 431
+      },
+      {
+        "left": "test_seen",
+        "right": "test_unseen",
+        "shared_offers": 0,
+        "shared_clusters": 0,
+        "shared_pairs": 0,
+        "shared_cluster_pairs": 0
+      },
+      {
+        "left": "test_seen",
+        "right": "train",
+        "shared_offers": 0,
+        "shared_clusters": 500,
+        "shared_pairs": 0,
+        "shared_cluster_pairs": 988
+      },
+      {
+        "left": "test_seen",
+        "right": "validation",
+        "shared_offers": 4,
+        "shared_clusters": 500,
+        "shared_pairs": 0,
+        "shared_cluster_pairs": 988
+      },
+      {
+        "left": "test_unseen",
+        "right": "train",
+        "shared_offers": 0,
+        "shared_clusters": 0,
+        "shared_pairs": 0,
+        "shared_cluster_pairs": 0
+      },
+      {
+        "left": "test_unseen",
+        "right": "validation",
+        "shared_offers": 0,
+        "shared_clusters": 0,
+        "shared_pairs": 0,
+        "shared_cluster_pairs": 0
+      },
+      {
+        "left": "train",
+        "right": "validation",
+        "shared_offers": 0,
+        "shared_clusters": 500,
+        "shared_pairs": 0,
+        "shared_cluster_pairs": 799
+      }
+    ],
+    "sources": [
+      {
+        "split_name": "test_half_unseen",
+        "source_filename": "wdcproducts50cc50rnd050un_gs.json.gz",
+        "source_sha256": "3b75ee9602884ccdd45f6c0b4b1977a25268ed78ced41c22814fb2ace69725d0",
+        "archive_sha256": "57fca0c66bd1d7a09298dfb5df4ed6428251487517e9cfbce209aad99388359d",
+        "source_url": "https://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/wdc-products/50pair.zip"
+      },
+      {
+        "split_name": "test_seen",
+        "source_filename": "wdcproducts50cc50rnd000un_gs.json.gz",
+        "source_sha256": "5cb5f43f325935a09900010ce988090e18cf7950b30ff7c85a308fa416350530",
+        "archive_sha256": "57fca0c66bd1d7a09298dfb5df4ed6428251487517e9cfbce209aad99388359d",
+        "source_url": "https://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/wdc-products/50pair.zip"
+      },
+      {
+        "split_name": "test_unseen",
+        "source_filename": "wdcproducts50cc50rnd100un_gs.json.gz",
+        "source_sha256": "b928d8c5dfe87b6e5a3791387adfa4cb2553bfadaa27340a90521c923825413e",
+        "archive_sha256": "57fca0c66bd1d7a09298dfb5df4ed6428251487517e9cfbce209aad99388359d",
+        "source_url": "https://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/wdc-products/50pair.zip"
+      },
+      {
+        "split_name": "train",
+        "source_filename": "wdcproducts50cc50rnd000un_train_small.json.gz",
+        "source_sha256": "fd4afcc9c4fada82819e62f783d49e3661113408eae276e6587e309ae755afef",
+        "archive_sha256": "57fca0c66bd1d7a09298dfb5df4ed6428251487517e9cfbce209aad99388359d",
+        "source_url": "https://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/wdc-products/50pair.zip"
+      },
+      {
+        "split_name": "validation",
+        "source_filename": "wdcproducts50cc50rnd000un_valid_small.json.gz",
+        "source_sha256": "64764bc43ff4686c9ff6683b141d8af1e01faa7a5a9d072378dbf3d84c64302c",
+        "archive_sha256": "57fca0c66bd1d7a09298dfb5df4ed6428251487517e9cfbce209aad99388359d",
+        "source_url": "https://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/wdc-products/50pair.zip"
+      }
+    ]
+  },
+  "validation_audit": {
+    "classifier_version": "logistic-title-attributes-v1",
+    "binary_threshold": 0.2889457402616079,
+    "binary_metrics": {
+      "pairs": 2500,
+      "true_matches": 500,
+      "predicted_matches": 705,
+      "true_positives": 363,
+      "false_positives": 342,
+      "false_negatives": 137,
+      "true_negatives": 1658,
+      "precision": 0.5148936170212766,
+      "recall": 0.726,
+      "f1": 0.6024896265560166,
+      "accuracy": 0.8084,
+      "review_rate": 0.0,
+      "automatic_decision_coverage": 1.0
+    },
+    "policy": {
+      "policy_version": "two-threshold-review-v1",
+      "target_precision": 0.95,
+      "min_support_per_automatic_class": 20,
+      "lower_threshold": 0.19254092640589743,
+      "upper_threshold": 1.0000000000000002,
+      "validation_metrics": {
+        "pairs": 2500,
+        "automatic_matches": 0,
+        "automatic_different": 1583,
+        "correct_matches": 0,
+        "false_matches": 0,
+        "correct_different": 1504,
+        "false_different": 79,
+        "review_matches": 421,
+        "review_nonmatches": 496,
+        "match_precision": null,
+        "different_precision": 0.9500947567909034,
+        "automatic_match_recall": 0.0,
+        "review_rate": 0.3668,
+        "automatic_decision_coverage": 0.6332
+      },
+      "match_enabled": false,
+      "different_enabled": true
+    },
+    "error_slices": {
+      "binary_false_match": {
+        "pairs": 342,
+        "evidence_counts": {
+          "model_candidate": {
+            "missing_both": 57,
+            "missing_one": 61,
+            "ambiguous": 164,
+            "agrees": 24,
+            "differs": 36
+          },
+          "storage_mention": {
+            "missing_both": 301,
+            "missing_one": 2,
+            "ambiguous": 0,
+            "agrees": 39,
+            "differs": 0
+          },
+          "storage_per_item": {
+            "missing_both": 337,
+            "missing_one": 2,
+            "ambiguous": 0,
+            "agrees": 2,
+            "differs": 1
+          },
+          "storage_total": {
+            "missing_both": 337,
+            "missing_one": 2,
+            "ambiguous": 0,
+            "agrees": 3,
+            "differs": 0
+          },
+          "storage_count": {
+            "missing_both": 337,
+            "missing_one": 2,
+            "ambiguous": 0,
+            "agrees": 2,
+            "differs": 1
+          },
+          "volume_mention": {
+            "missing_both": 337,
+            "missing_one": 3,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 2
+          },
+          "volume_per_item": {
+            "missing_both": 342,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "volume_total": {
+            "missing_both": 342,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "volume_count": {
+            "missing_both": 342,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "frequency": {
+            "missing_both": 325,
+            "missing_one": 6,
+            "ambiguous": 4,
+            "agrees": 5,
+            "differs": 2
+          },
+          "pack_count": {
+            "missing_both": 338,
+            "missing_one": 1,
+            "ambiguous": 0,
+            "agrees": 3,
+            "differs": 0
+          },
+          "sheet_count": {
+            "missing_both": 339,
+            "missing_one": 3,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "piece_count": {
+            "missing_both": 342,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "module_count": {
+            "missing_both": 342,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          }
+        }
+      },
+      "binary_missed_match": {
+        "pairs": 137,
+        "evidence_counts": {
+          "model_candidate": {
+            "missing_both": 11,
+            "missing_one": 45,
+            "ambiguous": 50,
+            "agrees": 2,
+            "differs": 29
+          },
+          "storage_mention": {
+            "missing_both": 118,
+            "missing_one": 16,
+            "ambiguous": 0,
+            "agrees": 1,
+            "differs": 2
+          },
+          "storage_per_item": {
+            "missing_both": 133,
+            "missing_one": 4,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "storage_total": {
+            "missing_both": 133,
+            "missing_one": 4,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "storage_count": {
+            "missing_both": 133,
+            "missing_one": 4,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "volume_mention": {
+            "missing_both": 135,
+            "missing_one": 2,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "volume_per_item": {
+            "missing_both": 137,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "volume_total": {
+            "missing_both": 137,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "volume_count": {
+            "missing_both": 137,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "frequency": {
+            "missing_both": 126,
+            "missing_one": 5,
+            "ambiguous": 2,
+            "agrees": 4,
+            "differs": 0
+          },
+          "pack_count": {
+            "missing_both": 137,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "sheet_count": {
+            "missing_both": 135,
+            "missing_one": 2,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "piece_count": {
+            "missing_both": 136,
+            "missing_one": 1,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "module_count": {
+            "missing_both": 137,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          }
+        }
+      },
+      "review_policy_false_different": {
+        "pairs": 79,
+        "evidence_counts": {
+          "model_candidate": {
+            "missing_both": 5,
+            "missing_one": 27,
+            "ambiguous": 24,
+            "agrees": 1,
+            "differs": 22
+          },
+          "storage_mention": {
+            "missing_both": 63,
+            "missing_one": 14,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 2
+          },
+          "storage_per_item": {
+            "missing_both": 76,
+            "missing_one": 3,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "storage_total": {
+            "missing_both": 76,
+            "missing_one": 3,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "storage_count": {
+            "missing_both": 76,
+            "missing_one": 3,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "volume_mention": {
+            "missing_both": 78,
+            "missing_one": 1,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "volume_per_item": {
+            "missing_both": 79,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "volume_total": {
+            "missing_both": 79,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "volume_count": {
+            "missing_both": 79,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "frequency": {
+            "missing_both": 71,
+            "missing_one": 4,
+            "ambiguous": 1,
+            "agrees": 3,
+            "differs": 0
+          },
+          "pack_count": {
+            "missing_both": 79,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "sheet_count": {
+            "missing_both": 78,
+            "missing_one": 1,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "piece_count": {
+            "missing_both": 78,
+            "missing_one": 1,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "module_count": {
+            "missing_both": 79,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          }
+        }
+      },
+      "review_queue": {
+        "pairs": 917,
+        "evidence_counts": {
+          "model_candidate": {
+            "missing_both": 152,
+            "missing_one": 184,
+            "ambiguous": 408,
+            "agrees": 88,
+            "differs": 85
+          },
+          "storage_mention": {
+            "missing_both": 786,
+            "missing_one": 15,
+            "ambiguous": 1,
+            "agrees": 115,
+            "differs": 0
+          },
+          "storage_per_item": {
+            "missing_both": 904,
+            "missing_one": 6,
+            "ambiguous": 0,
+            "agrees": 6,
+            "differs": 1
+          },
+          "storage_total": {
+            "missing_both": 904,
+            "missing_one": 6,
+            "ambiguous": 0,
+            "agrees": 7,
+            "differs": 0
+          },
+          "storage_count": {
+            "missing_both": 904,
+            "missing_one": 6,
+            "ambiguous": 0,
+            "agrees": 6,
+            "differs": 1
+          },
+          "volume_mention": {
+            "missing_both": 895,
+            "missing_one": 17,
+            "ambiguous": 0,
+            "agrees": 2,
+            "differs": 3
+          },
+          "volume_per_item": {
+            "missing_both": 917,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "volume_total": {
+            "missing_both": 917,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "volume_count": {
+            "missing_both": 917,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "frequency": {
+            "missing_both": 869,
+            "missing_one": 24,
+            "ambiguous": 6,
+            "agrees": 15,
+            "differs": 3
+          },
+          "pack_count": {
+            "missing_both": 908,
+            "missing_one": 4,
+            "ambiguous": 0,
+            "agrees": 5,
+            "differs": 0
+          },
+          "sheet_count": {
+            "missing_both": 912,
+            "missing_one": 5,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "piece_count": {
+            "missing_both": 917,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          },
+          "module_count": {
+            "missing_both": 917,
+            "missing_one": 0,
+            "ambiguous": 0,
+            "agrees": 0,
+            "differs": 0
+          }
+        }
+      }
+    },
+    "note": "Slices overlap; extracted evidence states are not verified error causes."
+  },
+  "test_predictions_computed": false,
+  "test_performance_computed": false
+}

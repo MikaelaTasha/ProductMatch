@@ -23,7 +23,8 @@ def main():
     print("Day 9 features: python -m scripts.preview_features")
     print("Day 10 classifier: python -m scripts.train_classifier")
     print("Day 11 review policy: python -m scripts.evaluate_review")
-    print("Next: Day 12 — investigate errors and split provenance.")
+    print("Day 12 audit: python -m scripts.audit_day12")
+    print("Next: Day 13 — test one improvement and freeze the evaluation protocol.")
 
 
 if __name__ == "__main__":

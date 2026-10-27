@@ -93,3 +93,11 @@ not yet verified.
 - **Why:** Make review workload and both automatic error types visible without pretending every pair can be reliably decided.
 - **Checked:** All 61 tests pass, including exhaustive-reference threshold search. Repeated real report is identical, database hash unchanged, Day 10 binary metrics reproduced. Default: 917 Review cases (36.68%), 1,583 automatic Different decisions including 79 actual matches, and zero automatic Matches.
 - **Uncertain:** Automatic Match cannot meet the targets with adequate support; its precision is undefined and recall zero. No underlying model improvement, completed human reviews or held-out evaluation claimed. Browser integration, split/error audit and independent explanation remain pending.
+
+
+## Day 12 — 2026-10-27 (audit complete; explanation pending)
+
+- **Changed:** Added reproducible validation error slices, local-only difficult examples, unordered pair/product-cluster metadata audit and evaluation options. Inspected ten unique validation error pairs; recorded hypotheses without relabeling or model changes.
+- **Why:** Investigate observed failures and qualify future test claims before model/protocol freezing.
+- **Checked:** All 64 tests pass; aggregate audit repeats and database hash stays unchanged. Raw file hashes/counts verified. Half-unseen test repeats 20 training and 23 validation pairs; 1,664 pairs touch development offers. Seen test has 35 pairs touching development offers. Unseen has zero shared offers/clusters/pairs with development. Train/validation share all 500 clusters despite disjoint offers.
+- **Uncertain:** Publisher-side overlap cause unverified; error categories are hypotheses, not exhaustive ground truth. No test predictions/performance computed. Primary unseen evaluation and qualified secondary/filter options await Day 13 freeze. Independent cluster/generalization explanation pending.

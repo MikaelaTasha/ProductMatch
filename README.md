@@ -31,7 +31,7 @@ This is our intended task definition. We still need to inspect how the benchmark
 labels relate to it; we will document discrepancies rather than silently relabel
 the benchmark.
 
-## Current status: Day 11
+## Current status: Day 12
 
 The starter prints the project scope. A dataset tool now downloads and loads
 the prepared WDC small training split and prints labeled product pairs.
@@ -58,8 +58,11 @@ The [Day 10 classifier](docs/day10-classifier.md) reaches 51.49% precision and
 more missed matches. The [Day 11 Review policy](docs/day11-review.md) routes
 36.68% of validation pairs to review at its provisional 95% precision target.
 Automatic Match is disabled because the target is unattainable with sufficient
-support; automatic Different still misses 79 real matches. Next is error and
-split analysis (Day 12).
+support; automatic Different still misses 79 real matches. The
+[Day 12 audit](docs/day12-audit.md) documents validation error patterns and exact
+pair overlap in the half-unseen test set. The unseen test has no measured
+development overlap by offer or cluster ID. Next is one justified improvement
+and freezing the evaluation protocol (Day 13).
 
 ## Run locally
 
@@ -138,6 +141,12 @@ To evaluate Match/Different/Review thresholds:
 
 ```sh
 python -m scripts.evaluate_review
+```
+
+To audit validation errors and split metadata without test predictions:
+
+```sh
+python -m scripts.audit_day12
 ```
 To leave the environment, run `deactivate`.
 In a new terminal, activate `.venv` before running these commands.
