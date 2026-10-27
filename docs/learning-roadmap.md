@@ -1,6 +1,6 @@
 # ProductMatch learning roadmap: data engineering
 
-Updated 2026-10-27, after Day 14 evaluation.
+Updated 2026-10-27, after Day 15 storage.
 
 ## Source and purpose
 
@@ -10,8 +10,8 @@ Planned work is distinguished from verified implementation and independent study
 
 The original 20-session plan covered a local matching prototype. The extension
 below adds explicit data-engineering, cloud, lakehouse and BI deliverables.
-Days 1–5 are completed. Days 6–14 now have verified implementations; outstanding
-learning exercises are recorded in their notes. Days 15 onward remain planned.
+Days 1–5 are completed. Days 6–15 now have verified implementations; outstanding
+learning exercises are recorded in their notes. Days 16 onward remain planned.
 Days are work sessions, not consecutive calendar days. Budget roughly 45–90
 minutes per session, splitting complex tasks across extra sessions as needed.
 

@@ -26,7 +26,8 @@ def main():
     print("Day 12 audit: python -m scripts.audit_day12")
     print("Day 13 freeze check: python -m scripts.freeze_evaluation")
     print("Day 14 results: docs/day14-evaluation.md")
-    print("Next: Day 15 — store versioned predictions and review records.")
+    print("Day 15 prediction store: python -m scripts.store_predictions")
+    print("Next: Day 16 — connect the review queue and saved corrections.")
 
 
 if __name__ == "__main__":

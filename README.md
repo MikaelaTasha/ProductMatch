@@ -31,7 +31,7 @@ This is our intended task definition. We still need to inspect how the benchmark
 labels relate to it; we will document discrepancies rather than silently relabel
 the benchmark.
 
-## Current status: Day 14
+## Current status: Day 15
 
 The starter prints the project scope. A dataset tool now downloads and loads
 the prepared WDC small training split and prints labeled product pairs.
@@ -68,7 +68,10 @@ thresholds and evaluation rules. Automatic Match remains disabled under the
 produced binary precision 23.61%, recall 67.20% and F1 34.95%. The Review policy
 routes 40.16% to review but incorrectly marks 109 genuine matches Different.
 The prototype is not ready for reliable automatic merging. Test results are now
-exposed; next is versioned prediction/review storage (Day 15).
+exposed. [Day 15 storage](docs/day15-storage.md) now keeps 2,500 training-pair
+predictions with model/source provenance in a separate local database. Review
+history is supported; no real reviews have been recorded. Next is the review
+queue interface (Day 16).
 
 ## Run locally
 
@@ -164,6 +167,12 @@ python -m scripts.freeze_evaluation
 The recorded [test results](docs/day14-evaluation.md) were produced with
 `python -m scripts.evaluate_frozen`; the runner refuses to overwrite an existing
 output. These test sets have now been evaluated and are no longer untouched.
+
+To store versioned training predictions separately from the frozen source:
+
+```sh
+python -m scripts.store_predictions
+```
 To leave the environment, run `deactivate`.
 In a new terminal, activate `.venv` before running these commands.
 

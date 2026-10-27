@@ -117,3 +117,11 @@ not yet verified.
 - **Why:** Measure generalization under the predeclared protocol instead of treating validation performance as final evidence.
 - **Checked:** All 74 tests passed before the real run. Freeze verified; one scoring pass per official split. All report counts reconcile, subset sizes match the protocol, and database/model/runner/freeze hashes agree. Primary unseen binary precision 23.61%, recall 67.20%, F1 34.95%. Review policy routes 1,807/4,500 pairs (40.16%), marks 2,693 Different with 109 errors, and has no automatic Matches.
 - **Uncertain:** Generalization is weak; Different precision 95.95% is descriptive, not a guarantee. Secondary sets retain documented overlap and supplementary filters alter their populations. No independent-pair significance, production, reviewer-outcome or cost claim. Further tuning must disclose test exposure and use fresh evaluation data for fresh claims.
+
+
+## Day 15 — 2026-10-27 (storage complete; explanation pending)
+
+- **Changed:** Added a separate local prediction database with append-only model versions, source/input/feature snapshots, deterministic prediction identities and review-event history. CLI verifies the frozen model/source and stores training predictions; no test rescoring or UI changes.
+- **Why:** Trace decisions and future human corrections without changing frozen benchmark data or overwriting model evidence.
+- **Checked:** All 81 tests pass. First real run inserted 2,500 predictions; second inserted zero. One model record, zero real reviews, SQLite integrity/foreign-key checks passed, frozen source/model verification passed after storage. Review behavior tested only with fictional temporary records.
+- **Uncertain:** UI integration and authenticated multi-user review are not implemented. Training predictions are workflow data, not evaluation results. Human labels remain separate and must not silently enter training. Independent key/provenance explanation pending.

@@ -1,0 +1,12 @@
+{
+  "scope": "Training predictions for workflow development; not evaluation.",
+  "models": 1,
+  "predictions": 2500,
+  "review_events": 0,
+  "decisions": {
+    "Different": 1648,
+    "Review": 852
+  },
+  "repeat_insertions": 0,
+  "frozen_source_verified_after_storage": true
+}
