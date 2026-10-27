@@ -77,3 +77,11 @@ not yet verified.
 - **Why:** Supply label-free evidence to the planned classifier without treating missing information or multiple candidates as a verified conflict.
 - **Checked:** All 49 tests pass. Two real-data reports agree and preserve the database hash. SQL audited 2,500 training pairs: no broken references/missing titles, 2,123 pairs with at least one missing brand. No validation/test evaluation or prediction changes.
 - **Uncertain:** Extraction errors carry through; some comparison fields have no training variation. No matching improvement measured. User correctly calculated 8GB total; independent pack explanation and Python/SQL practice remain pending.
+
+
+## Day 10 — 2026-10-27 (implementation complete; explanation exercise pending)
+
+- **Changed:** Added logistic regression with 71 inputs (title cosine and Day 9 indicators), training-only fitting, validation threshold selection, comparison report, reproducible configuration and convergence guard.
+- **Why:** Measure whether a supervised combination gives a more useful comparison point before introducing human review. No ablation claim is made.
+- **Checked:** All 55 tests pass. Real-data report reproduced exactly, database hash unchanged, saved Day 7 baseline metrics reproduced. Validation precision 51.49%, recall 72.60%, F1 60.25%; 342 false matches and 137 missed matches, versus 672 and 60 for the baseline. No test sets read.
+- **Uncertain:** Validation is reused for development and threshold selection. Scores are uncalibrated; false matches remain common. No Review policy, hard identity constraints or saved inference model. Probability/class-imbalance explanation exercises and split audit remain pending.

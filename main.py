@@ -13,7 +13,7 @@ def main():
     print("  Size, model, and pack quantity must agree when known.")
     print("  Sellers and prices may differ.")
     print("  Missing attributes alone do not mean different products.\n")
-    print("Status: title baseline and attribute extractor ready; pair explorer still shows benchmark labels only.")
+    print("Status: classifier validation complete; pair explorer still shows benchmark labels only.")
     print("Day 2 data tool: python scripts/wdc_data.py --download")
     print("Day 4 database tool: python -m scripts.import_data")
     print("Day 5 interface: python -m streamlit run app.py")
@@ -21,7 +21,8 @@ def main():
     print("Day 7 baseline: python -m scripts.run_baseline")
     print("Day 8 attributes: python -m scripts.preview_attributes")
     print("Day 9 features: python -m scripts.preview_features")
-    print("Next: Day 10 — train a classifier with similarity and attribute features.")
+    print("Day 10 classifier: python -m scripts.train_classifier")
+    print("Next: Day 11 — add thresholds for human review.")
 
 
 if __name__ == "__main__":

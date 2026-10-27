@@ -31,7 +31,7 @@ This is our intended task definition. We still need to inspect how the benchmark
 labels relate to it; we will document discrepancies rather than silently relabel
 the benchmark.
 
-## Current status: Day 9
+## Current status: Day 10
 
 The starter prints the project scope. A dataset tool now downloads and loads
 the prepared WDC small training split and prints labeled product pairs.
@@ -53,7 +53,9 @@ evaluation has been run. [Day 8 extraction](docs/day8-attributes.md) now records
 possible model codes, capacities, frequencies and explicit pack counts. It does
 not change predictions yet. [Day 9 pair features](docs/day9-features.md) now
 compare these details, keeping missing and ambiguous evidence separate.
-Next is a classifier using these features and title similarity (Day 10).
+The [Day 10 classifier](docs/day10-classifier.md) reaches 51.49% precision and
+72.60% recall at its validation-selected threshold: fewer false matches, but
+more missed matches. Next is a Review policy (Day 11).
 
 ## Run locally
 
@@ -120,6 +122,12 @@ For training-pair comparisons and a SQL data-quality summary:
 
 ```sh
 python -m scripts.preview_features
+```
+
+To train and compare the classifier on training/validation data:
+
+```sh
+python -m scripts.train_classifier
 ```
 To leave the environment, run `deactivate`.
 In a new terminal, activate `.venv` before running these commands.
