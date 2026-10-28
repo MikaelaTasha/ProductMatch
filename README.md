@@ -31,14 +31,15 @@ This is our intended task definition. We still need to inspect how the benchmark
 labels relate to it; we will document discrepancies rather than silently relabel
 the benchmark.
 
-## Current status: Day 15
+## Current status: Day 16
 
 The starter prints the project scope. A dataset tool now downloads and loads
 the prepared WDC small training split and prints labeled product pairs.
 SQLite now stores listings and original labeled pairs with repeatable imports.
 The Streamlit interface now lets you browse training pairs, search titles or
 pair IDs, and reveal the benchmark answer. A separate command now runs a
-TF-IDF/cosine baseline; the interface does not display model predictions yet.
+TF-IDF/cosine baseline. The Review queue now displays stored predictions and
+saves human judgments separately from original benchmark labels.
 
 We have reviewed 30 training pairs and documented [matching evidence, difficult
 cases, and unresolved questions](docs/day3-findings.md). See the
@@ -70,8 +71,10 @@ routes 40.16% to review but incorrectly marks 109 genuine matches Different.
 The prototype is not ready for reliable automatic merging. Test results are now
 exposed. [Day 15 storage](docs/day15-storage.md) now keeps 2,500 training-pair
 predictions with model/source provenance in a separate local database. Review
-history is supported; no real reviews have been recorded. Next is the review
-queue interface (Day 16).
+history is supported. The [Day 16 review interface](docs/day16-review-interface.md)
+now provides Pending/Completed queues, saved judgments and revision history.
+No real reviews have been recorded during verification. Next is clearer
+matching evidence and summaries (Day 17).
 
 ## Run locally
 

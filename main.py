@@ -27,7 +27,8 @@ def main():
     print("Day 13 freeze check: python -m scripts.freeze_evaluation")
     print("Day 14 results: docs/day14-evaluation.md")
     print("Day 15 prediction store: python -m scripts.store_predictions")
-    print("Next: Day 16 — connect the review queue and saved corrections.")
+    print("Day 16: open Review queue in the Streamlit sidebar.")
+    print("Next: Day 17 — present matching evidence and missing details.")
 
 
 if __name__ == "__main__":

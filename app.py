@@ -6,6 +6,8 @@ import sqlite3
 import streamlit as st
 
 from productmatch.browsing import find_training_pairs, get_training_pair
+from productmatch.predictions import DEFAULT_STORE
+from productmatch.review_ui import review_page
 
 ROOT = Path(__file__).resolve().parent
 DB_PATH = Path(os.environ.get('PRODUCTMATCH_DB', ROOT / 'data/productmatch.sqlite3'))
@@ -49,6 +51,12 @@ def listing_card(listing, heading):
 
 st.title('ProductMatch')
 st.write('Compare the details. Decide what makes two listings the same product.')
+mode = st.sidebar.radio('Workspace', ['Explore pairs', 'Review queue'], key='workspace_mode')
+if mode == 'Review queue':
+    if st.session_state.pop('review_clear_selection', False):
+        st.session_state.pop('review_prediction', None)
+    review_page(DB_PATH, Path(os.environ.get('PRODUCTMATCH_STORE', DEFAULT_STORE)), listing_card)
+    st.stop()
 st.caption('PAIR EXPLORER  ·  Training data only')
 
 with st.sidebar:
@@ -59,7 +67,7 @@ with st.sidebar:
     st.markdown('**What counts as the same product?**')
     st.write('Model, size, and pack quantity must agree when known. Sellers and prices may differ.')
     st.write('Missing information is uncertainty, not proof of a difference.')
-    st.caption('This is an inspection tool. It does not predict matches or save review decisions yet.')
+    st.caption('This explorer shows original listings and labels. Open Review queue to inspect stored predictions and save your judgment.')
 
 try:
     pair_ids = find_training_pairs(DB_PATH, st.session_state.search)

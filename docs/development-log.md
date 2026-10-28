@@ -125,3 +125,11 @@ not yet verified.
 - **Why:** Trace decisions and future human corrections without changing frozen benchmark data or overwriting model evidence.
 - **Checked:** All 81 tests pass. First real run inserted 2,500 predictions; second inserted zero. One model record, zero real reviews, SQLite integrity/foreign-key checks passed, frozen source/model verification passed after storage. Review behavior tested only with fictional temporary records.
 - **Uncertain:** UI integration and authenticated multi-user review are not implemented. Training predictions are workflow data, not evaluation results. Human labels remain separate and must not silently enter training. Independent key/provenance explanation pending.
+
+
+## Day 16 — 2026-10-28 (interface complete; user review/learning pending)
+
+- **Changed:** Added source/model-scoped training review queue, Pending/Completed/All filters, stored model decisions, explicit judgment form, saved confirmation and append-only review history. Original explorer remains available.
+- **Why:** Let the user save and revisit judgments without overwriting benchmark labels or model evidence.
+- **Checked:** All 86 tests pass, including five temporary-data UI/service tests. Live local page inspected: 852 pending model-Review pairs, original listing cards and judgment controls. No real review submitted; real review count zero. Frozen source/model verification still passes.
+- **Uncertain:** User's first review and independent explanation remain pending. Reviewer IDs are not authenticated; multi-user conflict management is not implemented. Model quality is unchanged. Day 17 evidence presentation remains planned.
