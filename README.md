@@ -31,7 +31,7 @@ This is our intended task definition. We still need to inspect how the benchmark
 labels relate to it; we will document discrepancies rather than silently relabel
 the benchmark.
 
-## Current status: Day 16
+## Current status: Day 17
 
 The starter prints the project scope. A dataset tool now downloads and loads
 the prepared WDC small training split and prints labeled product pairs.
@@ -73,8 +73,10 @@ exposed. [Day 15 storage](docs/day15-storage.md) now keeps 2,500 training-pair
 predictions with model/source provenance in a separate local database. Review
 history is supported. The [Day 16 review interface](docs/day16-review-interface.md)
 now provides Pending/Completed queues, saved judgments and revision history.
-No real reviews have been recorded during verification. Next is clearer
-matching evidence and summaries (Day 17).
+No real reviews have been recorded during verification. [Day 17 evidence](docs/day17-evidence.md)
+now shows extracted details, differences, missing information and the recorded
+decision thresholds in the review page. Next is pipeline automation and GitHub
+checks (Day 18).
 
 ## Run locally
 

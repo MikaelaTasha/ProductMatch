@@ -5,6 +5,7 @@ import uuid
 import streamlit as st
 
 from productmatch.browsing import get_training_pair
+from productmatch.evidence import explain_prediction
 from productmatch.review_queue import available_models, queue_rows, get_review_record, submit_review
 from scripts.wdc_data import checksum
 
@@ -62,6 +63,31 @@ def review_page(source_path,store_path,listing_card):
         listing_card(pair['right'],'Right listing')
     st.info(f"Stored model decision: {prediction['decision']} · model score: {prediction['score']:.3f}")
     st.caption('The score is not calibrated confidence. Model predictions can be wrong.')
+    st.subheader('Details to check')
+    try:
+        evidence=explain_prediction(record)
+    except (ValueError,KeyError,TypeError) as error:
+        st.warning(f'Extracted evidence is unavailable: {error} Use the original listings above.')
+    else:
+        st.write(evidence['decision_reason'])
+        st.write(evidence['summary'])
+        st.caption('These are title-extraction hints, not verified facts or an explanation of each feature’s influence on the score. Missing evidence does not mean a mismatch. Extraction can miss important differences; check the original listings.')
+        show_missing=st.checkbox('Include details not found in either title',key=f'evidence_missing_{selected}')
+        visible=[{k:v for k,v in row.items() if k!='state'} for row in evidence['rows']
+                 if show_missing or row['state']!='missing_both']
+        if visible:
+            st.dataframe(visible,hide_index=True,width="stretch")
+        else:
+            st.info('No supported product details were extracted from either title. Inspect the original listings; this is not evidence of a match.')
+        if evidence['alias_evidence']:
+            st.caption(f"Model codes ignoring punctuation: {evidence['alias_evidence']}. This extra comparison does not establish product identity.")
+        with st.expander('Score and decision thresholds'):
+            st.text(f"Stored model score: {evidence['score']:.12g}\nTitle similarity: {evidence['title_similarity']:.12g}\nDifferent when score is below: {evidence['lower_threshold']:.12g}")
+            if evidence['match_enabled']:
+                st.text(f"Match when score is at least: {evidence['upper_threshold']:.12g}")
+            else:
+                st.text('Automatic Match: disabled')
+            st.caption('Scores between the two thresholds go to Review. Displayed numbers are rounded; decisions use the full stored values.')
     history=record['reviews']
     if history:
         st.write(f"Latest human judgment: {history[-1]['decision']}")

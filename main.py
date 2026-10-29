@@ -28,7 +28,8 @@ def main():
     print("Day 14 results: docs/day14-evaluation.md")
     print("Day 15 prediction store: python -m scripts.store_predictions")
     print("Day 16: open Review queue in the Streamlit sidebar.")
-    print("Next: Day 17 — present matching evidence and missing details.")
+    print("Day 17: inspect Details to check in the Review queue.")
+    print("Next: Day 18 — automate the local pipeline and GitHub checks.")
 
 
 if __name__ == "__main__":

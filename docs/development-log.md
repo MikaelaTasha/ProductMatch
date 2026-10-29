@@ -133,3 +133,11 @@ not yet verified.
 - **Why:** Let the user save and revisit judgments without overwriting benchmark labels or model evidence.
 - **Checked:** All 86 tests pass, including five temporary-data UI/service tests. Live local page inspected: 852 pending model-Review pairs, original listing cards and judgment controls. No real review submitted; real review count zero. Frozen source/model verification still passes.
 - **Uncertain:** User's first review and independent explanation remain pending. Reviewer IDs are not authenticated; multi-user conflict management is not implemented. Model quality is unchanged. Day 17 evidence presentation remains planned.
+
+
+## Day 17 — 2026-10-29 (evidence display complete; explanation pending)
+
+- **Changed:** Added readable side-by-side attribute evidence, missing/ambiguous states, separate alias comparison, score-range explanation and recorded-threshold display to the review UI. Evidence is reconstructed from stored inputs and checked against stored indicators.
+- **Why:** Help reviewers inspect product distinctions while distinguishing extraction hints from verified facts or causal model explanations.
+- **Checked:** All 92 tests pass. All 2,500 stored predictions passed evidence consistency checks; frozen pipeline verifies. Live training review page inspected, with no real review writes (count zero). No model changes or test rescoring.
+- **Uncertain:** Extraction misses some important attributes; display does not establish matching correctness or feature attribution. Independent explanation remains pending. Pipeline and CI automation are next.
